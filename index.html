@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <title>Marketplace Testing Page</title>
+  <!-- <link rel="manifest" href="manifest.json" /> -->
+</head>
+<body>
+  <main>
+    <nav>
+      <h1>Marketplace LiveX Admin Page</h1>
+    </nav>
+    <form id="shopifyconnect">
+      <h2>User Input Info about their shopify store</h2>
+      <label for="domain">domain</label>
+      <input type="text" id="domain" name="domain" placeholder="yohotest.myshopify.com"><br>
+      <label for="storefrontAccessToken">storefrontAccessToken</label>
+      <input type="text" id="storefrontAccessToken" name="storefrontAccessToken" placeholder="f748b24dc91d10cb9f1238b6483db46c"><br>
+      <input type="submit"> 
+    </form>
+    <hr/>    
+    <div class="container"></div>
+    <button onclick="listSelectedItems()">List Selected Items on LiveX</button>
+    <nav>
+      <h1>Marketplace LiveX Platform Page</h1>
+      <input type="text" id="searchProducts" placeholder="Search Products...">
+    </nav>
+    <div class="liveX"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
