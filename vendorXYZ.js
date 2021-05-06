@@ -1,6 +1,4 @@
-const container = document.querySelector(".container")
-const liveX = document.querySelector(".liveX")
-const vendorContainer = document.querySelector(".anothervendor")
+const vendorContainer = document.querySelector(".vendor")
 const scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
 let output =""
 
@@ -250,12 +248,12 @@ function loadCollectionModal () {
     //   storefrontAccessToken: '9e031bbb20e9d6f469b6dbeefaed6069',
     // });
     var client = ShopifyBuy.buildClient({
-      domain: 'nextech-test.myshopify.com',
-      storefrontAccessToken: '110ec768d64a3d457387522b48e6c95a',
+      domain: 'yohotest.myshopify.com',
+      storefrontAccessToken: '9e031bbb20e9d6f469b6dbeefaed6069',
     });
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('collection', {
-        id: '266350624941',
+        id: '265613050052',
         node: document.getElementById('collection-component-1620079036032'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
@@ -410,34 +408,34 @@ function submitInput(e){
 }
  
 
-document.querySelector("#shopifyconnect").addEventListener("submit", submitInput)
-document.querySelector("#searchProducts").addEventListener("keypress", function(e){
-  if(e.key==='Enter'){
-    searchInput = document.querySelector("#searchProducts").value
-    let allProducts = document.getElementsByClassName("shopify-livex-products")
+// document.querySelector("#shopifyconnect").addEventListener("submit", submitInput)
+// document.querySelector("#searchProducts").addEventListener("keypress", function(e){
+//   if(e.key==='Enter'){
+//     searchInput = document.querySelector("#searchProducts").value
+//     let allProducts = document.getElementsByClassName("shopify-livex-products")
 
-    if (searchInput){
-      console.log(searchInput);
-      let allProducts = document.getElementsByClassName("shopify-livex-products")
-      for (i=0; i<allProducts.length; i++){
-        let nodeClassName = allProducts[i].className
-        if (nodeClassName.indexOf(searchInput)> -1){
-          allProducts[i].style.display="block";
-        } else{
-          allProducts[i].style.display="none";
-        }
-      }
-    } else{
-      console.log("Clear Search")
-      for (i=0; i<allProducts.length; i++){
-        allProducts[i].style.display="block"
+//     if (searchInput){
+//       console.log(searchInput);
+//       let allProducts = document.getElementsByClassName("shopify-livex-products")
+//       for (i=0; i<allProducts.length; i++){
+//         let nodeClassName = allProducts[i].className
+//         if (nodeClassName.indexOf(searchInput)> -1){
+//           allProducts[i].style.display="block";
+//         } else{
+//           allProducts[i].style.display="none";
+//         }
+//       }
+//     } else{
+//       console.log("Clear Search")
+//       for (i=0; i<allProducts.length; i++){
+//         allProducts[i].style.display="block"
 
-      }
+//       }
 
-    }
-  }
-})
+//     }
+//   }
+// })
 
 
-// document.addEventListener("DOMContentLoaded", loadCollectionModal)
+document.addEventListener("DOMContentLoaded", loadCollectionModal)
 

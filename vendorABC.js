@@ -1,6 +1,4 @@
-const container = document.querySelector(".container")
-const liveX = document.querySelector(".liveX")
-const vendorContainer = document.querySelector(".anothervendor")
+const vendorContainer = document.querySelector(".vendor")
 const scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
 let output =""
 
@@ -410,34 +408,34 @@ function submitInput(e){
 }
  
 
-document.querySelector("#shopifyconnect").addEventListener("submit", submitInput)
-document.querySelector("#searchProducts").addEventListener("keypress", function(e){
-  if(e.key==='Enter'){
-    searchInput = document.querySelector("#searchProducts").value
-    let allProducts = document.getElementsByClassName("shopify-livex-products")
+// document.querySelector("#shopifyconnect").addEventListener("submit", submitInput)
+// document.querySelector("#searchProducts").addEventListener("keypress", function(e){
+//   if(e.key==='Enter'){
+//     searchInput = document.querySelector("#searchProducts").value
+//     let allProducts = document.getElementsByClassName("shopify-livex-products")
 
-    if (searchInput){
-      console.log(searchInput);
-      let allProducts = document.getElementsByClassName("shopify-livex-products")
-      for (i=0; i<allProducts.length; i++){
-        let nodeClassName = allProducts[i].className
-        if (nodeClassName.indexOf(searchInput)> -1){
-          allProducts[i].style.display="block";
-        } else{
-          allProducts[i].style.display="none";
-        }
-      }
-    } else{
-      console.log("Clear Search")
-      for (i=0; i<allProducts.length; i++){
-        allProducts[i].style.display="block"
+//     if (searchInput){
+//       console.log(searchInput);
+//       let allProducts = document.getElementsByClassName("shopify-livex-products")
+//       for (i=0; i<allProducts.length; i++){
+//         let nodeClassName = allProducts[i].className
+//         if (nodeClassName.indexOf(searchInput)> -1){
+//           allProducts[i].style.display="block";
+//         } else{
+//           allProducts[i].style.display="none";
+//         }
+//       }
+//     } else{
+//       console.log("Clear Search")
+//       for (i=0; i<allProducts.length; i++){
+//         allProducts[i].style.display="block"
 
-      }
+//       }
 
-    }
-  }
-})
+//     }
+//   }
+// })
 
 
-// document.addEventListener("DOMContentLoaded", loadCollectionModal)
+document.addEventListener("DOMContentLoaded", loadCollectionModal)
 
